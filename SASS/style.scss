@@ -1,0 +1,669 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+
+$main-color:#373a9d;
+$main-background:rgba(25, 20, 20, 0.1);
+$main-box-shadow: 0 .5rem 1rem rgba(26, 25, 25, 0.8);
+
+@mixin importe-text {
+    font-size: 3.5rem
+}
+
+@mixin span {
+    color: $main-color;
+    font-weight: 700;
+}
+
+
+* {
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+#menu-bars {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: $main-color;
+    color: #fff;
+    border-radius: .5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+
+.fa-bars {
+    display: none;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.nav {
+    width: 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(17, 17, 17);
+    display: inline-block;
+
+    p {
+        padding-top: 70px;
+        font-size: 1.8rem;
+        color: #fff;
+        text-align: center;
+        user-select: none;
+
+        span {
+            color: $main-color;
+            font-weight: 700;
+        }
+    }
+
+    .link_item {
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        li {
+            padding-bottom: 25px;
+
+
+            a {
+                color: #fff;
+                font-size: 1.2rem;
+                font-weight: 600;
+                transition: ease-in-out 0.5s;
+
+                &:hover {
+                    letter-spacing: .2rem;
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    .Sociales {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+
+        a {
+            color: #fff;
+            font-size: 1.8rem;
+            letter-spacing: 20px;
+            transition: ease-in-out 0.5s;
+
+            &:hover {
+                color: $main-color;
+                font-size: 2.0rem;
+            }
+        }
+
+    }
+
+}
+
+// Cuerpo
+
+.cuerpo {
+    width: 75%;
+    background-color: rgba(11, 7, 7, 0.2);
+    padding-left: 1.5rem;
+    display: inline-block;
+
+    .Inicio {
+        display: flex;
+        flex-direction: row;
+
+
+        .text {
+            padding-top: 100px;
+            display: inline-block;
+
+            .text1 {
+                color: $main-color;
+                font-size: 1.5rem;
+
+            }
+
+            .text2 {
+
+                padding-bottom: 20px;
+                font-size: 2.4rem;
+                color: #fff;
+
+                span {
+                    color: $main-color;
+                    font-weight: 700;
+                }
+            }
+
+            .text3 {
+                font-size: 1.8rem;
+                font-weight: 700;
+                padding-bottom: 10px;
+            }
+
+            .text4 {
+                text-align: justify;
+                padding-right: 20px;
+                padding-bottom: 50px;
+            }
+
+            .btn {
+                margin-top: 1rem;
+                padding: 10px 35px;
+                background: $main-color;
+                color: #fff;
+                font-size: 1.2rem;
+                transition: ease-in-out 0.5s;
+
+                &:hover {
+                    letter-spacing: .2rem;
+                    background-color: #000;
+                }
+            }
+        }
+
+        .imagen {
+            padding-top: 20px;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+    }
+
+
+    // AcercadeMi
+
+    .AcercadeMi {
+        padding-top: 30px;
+        display: inline-block;
+
+        .SobreMi {
+            @include importe-text;
+
+            span {
+                @include span;
+            }
+        }
+
+        .datosGerenerales {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+
+
+            .imagen {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border: #fff 10px solid;
+                    border-radius: 5%;
+                }
+            }
+
+            .presentacion {
+                padding-right: 40px;
+                padding-left: 20px;
+
+                h3 {
+                    font-size: 1.5rem;
+                    text-align: justify;
+                    padding-bottom: 10px;
+                }
+
+                .text {
+                    text-align: justify;
+                    padding-bottom: 20px;
+                }
+
+                .datos {
+                    display: inline-block;
+
+                    .personal {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        padding-bottom: 50px;
+
+                        .personal1 {
+                            padding-right: 40px;
+
+                            p {
+                                text-align: justify;
+                                padding-bottom: 10px;
+
+                                span {
+                                    color: $main-color;
+                                    font-weight: 700;
+                                }
+                            }
+
+                        }
+
+                        .personal2 {
+
+                            p {
+                                text-align: justify;
+                                padding-bottom: 10px;
+
+                                span {
+                                    color: $main-color;
+                                    font-weight: 700;
+                                }
+                            }
+
+                        }
+
+
+
+                    }
+
+                    .btn {
+                        display: inline-block;
+
+                        a {
+
+                            margin-top: 1rem;
+                            padding: 10px 35px;
+                            background: $main-color;
+                            color: #fff;
+                            font-size: 1.2rem;
+                            transition: ease-in-out 0.5s;
+                            margin-right: 20px;
+
+                            &:hover {
+                                letter-spacing: .2rem;
+                                background-color: #000;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+
+            }
+        }
+
+    }
+
+    // Servicios
+
+    .Servicio {
+        h1 {
+            @include importe-text;
+
+            span {
+                @include span;
+            }
+        }
+
+        .servic_item {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0.5rem 0;
+
+            .item {
+                width: 45%;
+                text-align: center;
+                margin-right: 30px;
+                margin-bottom: 30px;
+                padding: 20px 10px;
+                background: $main-background;
+                border-radius: .5rem;
+                box-shadow: $main-box-shadow;
+
+                i {
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 5rem;
+                    font-size: 2.0rem;
+                    color: #fff;
+                    background: $main-color;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    color: #444;
+                    font-size: 1.5rem;
+                    padding-top: 1rem;
+                }
+
+                p {
+                    color: #666;
+                    font-size: 1.0rem;
+                    padding-top: .5rem;
+                    text-align: justify;
+                }
+            }
+
+        }
+
+
+    }
+
+    // Servicios
+
+    .Experiencia {
+        h1 {
+            @include importe-text;
+
+            span {
+                @include span;
+            }
+        }
+
+        .ExperGeneral {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .ExpeEspe {
+                width: 45%;
+                text-align: center;
+                padding: 1rem;
+                background: $main-background;
+                border-radius: .5rem;
+                box-shadow: $main-box-shadow;
+                margin: 1rem 1rem;
+
+                .contenido {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+
+
+                    span {
+                        color: #fff;
+                        font-size: 1.2rem;
+                        background: $main-color;
+                        border-radius: 50rem;
+                        padding: .4rem 1rem;
+                    }
+
+                    h3 {
+                        font-size: 2.0rem;
+                        padding: .5rem 0;
+                        color: #111;
+                    }
+
+                    p {
+                        font-size: 1.0rem;
+                        color: #666;
+                        text-align: justify;
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+
+    // Portafoli
+
+    .Portafolio {
+        display: inline-block;
+
+        h1 {
+            @include importe-text;
+
+            span {
+                color: $main-color;
+                font-weight: 700;
+            }
+        }
+
+        .proyect {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .project-item {
+                display: none;
+
+                &.active {
+                    display: block;
+                    animation: scaleUp 0.25s ease forwards;
+                }
+
+                a {
+                    width: 100%;
+
+                    .project-img {
+                        position: relative;
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 16px;
+                        overflow: hidden;
+                        margin-bottom: 15px;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            transition: 0.25s ease;
+
+                            &:hover {
+                                transform: scale(1.1);
+                            }
+                        }
+
+                    }
+
+                    h3 {
+                        color: #111;
+                        font-size: 1.0rem;
+
+                    }
+
+                    p {
+                        color: #666;
+                        font-size: 1.0rem;
+                        padding-bottom: 1.0rem;
+                    }
+
+
+                }
+
+
+            }
+
+
+        }
+
+    }
+
+
+    // Contact{
+
+    .Contacto {
+        padding-bottom: 50px;
+
+        h1 {
+            @include importe-text;
+            padding-bottom: 20px;
+        }
+
+        .contacto_item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding-bottom: 0.5rem;
+
+            .contac {
+                text-align: center;
+                padding: 2rem;
+                margin-right: 2%;
+                background: $main-background;
+                box-shadow: $main-box-shadow;
+                border-radius: .5rem;
+                margin-bottom: 5%;
+
+
+                i {
+                    height: 3rem;
+                    width: 3rem;
+                    padding-top: 15px;
+                    font-size: 1rem;
+                    background: $main-color;
+                    color: #fff;
+                    border-radius: 50%;
+                }
+
+                h3 {
+                    color: #111;
+                    font-size: 1.5rem;
+                    padding: .5rem 0;
+                    padding-top: 1rem;
+                }
+
+                p {
+                    color: #666;
+                    font-size: 1.0rem;
+                }
+
+            }
+        }
+
+
+    }
+
+
+
+}
+
+.footer {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+    background: #fff;
+
+    span {
+        color: $main-color;
+    }
+}
+
+/* media queries  */
+@media (max-width: 991px) {
+    .html {
+        font-size: 55%;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    #menu-bars {
+        display: initial;
+    }
+
+    .nav {
+        left: -120%;
+
+        &.active {
+            left: 0%;
+            width: 30%;
+            z-index: 10000;
+        }
+    }
+
+    .cuerpo {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 874px) {
+
+    html {
+        font-size: 90%;
+
+        .home {
+            .Inicio {
+                flex-direction: column;
+                justify-content: center;
+
+                .text {
+                    width: 100%;
+                }
+
+                .imagen {
+                    width: 90%;
+                }
+
+            }
+
+        }
+
+        .nav {
+            width: 100%;
+        }
+
+    }
+
+
+}
+
+
+
+
+
+@media (max-width: 450px) {
+    html {
+        font-size: 70%;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .cuerpo {
+        .AcercadeMi {
+     
+
+            .datosGerenerales {
+                display: flex;
+                flex-direction: column;
+
+            }
+        }
+    }
+
+
+
+
+}
